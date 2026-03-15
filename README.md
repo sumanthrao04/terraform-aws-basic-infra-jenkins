@@ -18,7 +18,7 @@ This project is designed to showcase **DevOps best practices** such as:
 
 # Architecture Diagram
 
-![Architecture Diagram](architecture\terraform-aws-basic-infra-jenkins.png)
+![Architecture Diagram](architecture/terraform-aws-basic-infra-jenkins.png)
 
 ---
 
