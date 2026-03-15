@@ -85,7 +85,7 @@ resource "aws_instance" "web_server" {
   vpc_security_group_ids      = [aws_security_group.web_sg.id]
   associate_public_ip_address = true
 
-  user_data = file("${path.module}/../scripts/install_nginx.sh")
+  user_data                   = file("${path.module}/../scripts/install_nginx.sh")
   user_data_replace_on_change = true
 
   tags = {
