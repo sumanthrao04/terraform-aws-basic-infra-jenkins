@@ -22,7 +22,7 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 dir('terraform') {
-                    sh 'terraform init'
+                    sh 'terraform init -no-color'
                 }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
         stage('Terraform Format Check') {
             steps {
                 dir('terraform') {
-                    sh 'terraform fmt -check -recursive'
+                    sh 'terraform fmt -no-color -check -recursive'
                 }
             }
         }
@@ -38,7 +38,7 @@ pipeline {
         stage('Terraform Validate') {
             steps {
                 dir('terraform') {
-                    sh 'terraform validate'
+                    sh 'terraform validate -no-color'
                 }
             }
         }
@@ -46,7 +46,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 dir('terraform') {
-                    sh 'terraform plan -out=tfplan'
+                    sh 'terraform plan -no-color -out=tfplan'
                 }
             }
         }
@@ -55,7 +55,7 @@ pipeline {
             steps {
                 input message: 'Approve Terraform Apply?', ok: 'Apply'
                 dir('terraform') {
-                     sh 'terraform plan -var-file="terraform.tfvars" -out=tfplan'
+                     sh 'terraform plan -no-color -var-file="terraform.tfvars" -out=tfplan'
                 }
             }
         }
