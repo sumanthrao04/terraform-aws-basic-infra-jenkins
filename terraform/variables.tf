@@ -25,8 +25,8 @@ variable "instance_type" {
   type        = string
 
   validation {
-    condition     = contains(["t2.micro", "t3.micro"], var.instance_type)
-    error_message = "Only t2.micro or t3.micro are allowed for this project."
+    condition     = contains(["t3.micro", "t3.small"], var.instance_type)
+    error_message = "Only t3.micro or t3.small are allowed for this project."
   }
 }
 
