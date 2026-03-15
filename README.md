@@ -324,7 +324,7 @@ Planned enhancements for future projects:
 ---
 
 # Author
-```
-Sumanth Parashuram
-Devops Engineer
-```
+
+## Sumanth Parashuram
+### Devops Engineer
+
