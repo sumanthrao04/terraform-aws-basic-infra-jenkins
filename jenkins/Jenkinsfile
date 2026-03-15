@@ -46,7 +46,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 dir('terraform') {
-                    sh 'terraform plan -no-color -out=tfplan'
+                    sh 'terraform plan -no-color -var-file="terraform.tfvars" -out=tfplan'
                 }
             }
         }
@@ -55,7 +55,7 @@ pipeline {
             steps {
                 input message: 'Approve Terraform Apply?', ok: 'Apply'
                 dir('terraform') {
-                     sh 'terraform plan -no-color -var-file="terraform.tfvars" -out=tfplan'
+                    sh 'terraform apply -no-color -auto-approve tfplan'
                 }
             }
         }
