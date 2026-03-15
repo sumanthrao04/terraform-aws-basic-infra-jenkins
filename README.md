@@ -323,34 +323,6 @@ Planned enhancements for future projects:
 
 ---
 
-# Work Flow Diagram
-
-The following diagram illustrates the CI/CD pipeline and AWS infrastructure deployed using Terraform.
-
-## terraform-aws-basic-infra-jenkins-instance
-![terraform-aws-basic-infra-jenkins-instance](architecture/terraform-aws-basic-infra-jenkins-instance.png)
-
-## Jenkins Server Instance
-![Jenkins Server Instance](architecture/Jenkins-instance.png)
-
-
-## Jenkins Server Instance Monitoring
-![Jenkins Server Instance](architecture/Jenkins-instance-monitoring.png)
-
-## terraform-aws-basic-infra-jenkins-vpc
-![terraform-aws-basic-infra-jenkins-vpc](architecture/terraform-aws-basic-infra-jenkins-vpc.png)
-
-## EC2-Jenkins IAM Role
-![EC2-Jenkins IAM Role](architecture/ec2-jenkins-role.png)
-
-
-## Jenkins Pipeline
-![Jenkins Pipeline](architecture/Jenkins-pipeline.png)
-
-
-## Jenkins Console
-![Jenkins Console](architecture/jenkins-console.png)
-
 # Author
 ```
 Sumanth Parashuram
