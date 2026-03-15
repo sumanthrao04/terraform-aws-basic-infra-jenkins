@@ -7,6 +7,12 @@ pipeline {
     }
 
     stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+
         stage('Checkout') {
             steps {
                 git branch: 'master', url: 'https://github.com/sumanthrao04/terraform-aws-basic-infra-jenkins.git'
@@ -64,9 +70,14 @@ pipeline {
     post {
         success {
             echo 'Terraform deployment completed successfully.'
+            cleanWs()
         }
         failure {
             echo 'Terraform pipeline failed.'
+            cleanWs()
+        }
+        always {
+            echo 'Pipeline finished.'
         }
     }
 }
